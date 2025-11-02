@@ -66,7 +66,15 @@ function validateForm(event){
     requiredInputs.forEach(input =>{
         const formGroupDiv = input.closest('.form_group');
         const label = formGroupDiv.querySelector('label');
-        const labelText = label.textContent;
+
+        //Bỏ ký tử span * khỏi label khi hiển thị error
+        const labelClone = label.cloneNode(true);
+        const requiredSpan = labelClone.querySelector('span');
+        if (requiredSpan){
+            requiredSpan.remove();
+        }
+
+        const labelText = labelClone.textContent;
 
         clearError(input);
     
