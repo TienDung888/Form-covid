@@ -2,6 +2,7 @@ const submitBtn = document.querySelector('button');
 
 // regex email
 const emailRegex = /^[^s@]+@[^s@]+.[^s@]+$/;
+const sdtRegex = /^\d{10}$/;
 
 // Lấy tất cả các input radio 
 const nganhRadio = document.getElementsByName('nganh');
@@ -74,6 +75,17 @@ function validateForm(event){
             isValid = false;
         }
     });
+
+    //Check sdt
+    const sdt = document.getElementById('sdt');
+    if(sdt.value.trim() !== ""){
+        if(!sdtRegex.test(sdt.value.trim())){
+            setError(sdt, 'Số điện thoại không hợp lệ');
+            isValid = false;
+        }else{
+            clearError(sdt);
+        }
+    }
 
     //Check email
     const email = document.getElementById('email');
