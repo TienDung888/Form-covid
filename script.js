@@ -29,12 +29,9 @@ function setError(element, message) {
     
     let errorDisplay = element.nextElementSibling;
     
-    // Kiểm tra xem phần tử kế tiếp có phải là thông báo lỗi không
-    if (!errorDisplay || !errorDisplay.classList.contains('error-message')) {
-        errorDisplay = document.createElement('span');
-        errorDisplay.classList.add('error-message');
-        element.parentNode.insertBefore(errorDisplay, element.nextSibling);
-    }
+    errorDisplay = document.createElement('span');
+    errorDisplay.classList.add('error-message');
+    element.parentNode.insertBefore(errorDisplay, element.nextSibling);
     errorDisplay.textContent = message;
 }
 
@@ -51,7 +48,7 @@ function clearError(element) {
     }
 }
 
-// Vòng lặp check radio
+// Hàm check radio
 function isRadioChecked(radio){
     for(let i=0; i<radio.length; i++){
         if(radio[i].checked){
