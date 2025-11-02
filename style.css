@@ -18,12 +18,15 @@ body{
     flex-direction: column;
     margin-bottom: 35px;
 }
-label{
-    font-weight: bold;
-    margin-bottom: 5px;
+.form_group span{
+    color: #ff0000;
 }
 .form_group p{
     margin: 5px 0 7px 0;
+}
+label{
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 .option{
     display: flex;
@@ -43,7 +46,8 @@ label{
 }
 .cam_on{
     font-size: 25px;
-    margin-bottom: -7px
+    margin-bottom: -7px;
+    margin-top: -2px;
 }
 .check_box{
     display: flex;
@@ -63,4 +67,27 @@ button{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     margin-left: -15px;
+}
+input{
+    border-style:solid ;
+    border-color: #ccc;
+}
+textarea{
+    border-style:solid ;
+    border-color: #ccc;
+}
+.link{
+    text-align: center; 
+    margin-top: 10px;
+}
+.link a{
+    color: rgb(0, 89, 255);
+    text-decoration: none;
+}
+span{
+    color: #333;
+    margin: 0 5px;
+}
+.error-border{
+    border-color: #ff0000;
 }

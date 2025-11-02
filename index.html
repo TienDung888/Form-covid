@@ -14,24 +14,26 @@
     <div class="form_container">
 
         <div class="form_group">
-            <label for="ten-don-vi">Tên đơn vị</label>
+            <label for="ten-don-vi" title="Vui lòng nhập họ tên không dấu nếu có thể.">Tên đơn vị<span>*</span></label>
             <p>Ghi đúng tên doanh nghiệp/ Hộ kinh doanh theo giấy Chứng nhận đăng ký kinh doanh</p>
-            <input type="text" id="ten-don-vi">
+            <input type="text" id="ten-don-vi" >
         </div>
 
         <div class="form_group">
-            <label for="ma-so-thue">Mã số thuế</label>
-            <input type="text" id="ma-so-thue">
+            <label for="ma-so-thue" title="Nhập Mã số thuế 10 hoặc 13 số của đơn vị.">Mã số thuế<span>*</span></label>
+            <input type="text" id="ma-so-thue" >
         </div>
 
         <div class="form_group">
-            <label for="dia-chi">Địa chỉ chi tiết (số nhà, đường)</label>
-            <input type="text" id="dia-chi">
+            <label for="dia-chi" title="Nhập số nhà, tên đường, theo Vneid.">Địa chỉ chi tiết (số nhà, đường)<span>*</span></label>
+            <input type="text" id="dia-chi" >
         </div>
 
         <div class="form_group">
-            <label>Ngành nghề</label>
+            <label>Ngành nghề<span>*</span></label>
+            <span id="nganh-error-display" class="error-message"></span>
             <p>Chọn ngành nghề đơn vị mình đang SXKD</p>
+            
 
             <div class="radio_group">
 
@@ -110,11 +112,12 @@
                     <label for="option15">15) Các doanh nghiệp, cơ sở kinh doanh, dịch vụ khác: thương mại, ăn uống, chăm sóc sắc đẹp, ...</label>
                 </div>
             </div>
+            
         </div>
 
         <div class="form_group">
-            <label>Phường</label>
-
+            <label>Phường<span>*</span></label>
+            <span id="phuong-error-display" class="error-message"></span>
             <div class="radio_grid">
 
                 <div class="option">
@@ -198,18 +201,27 @@
                 </div>
 
             </div>
-
         </div>
 
         <div class="form_group">
-            <label for="que">Quê quán</label>
-            <input type="text" id="que">
+            <label for="quan">Quận: </label>
+            <input type="text" id="quan">
         </div>
 
         <div class="form_group">
-            <label for="so-nguoi">Số người đã tiêm vắc xin COVID-19:</label>
+            <label for="tong">Tổng số người lao động tại đơn vị:<span>*</span></label>
+            <input type="text" id="tong">
+        </div>
+
+        <div class="form_group">
+            <label for="so-nguoi">Số người đã tiêm vắc xin COVID-19:<span>*</span></label>
             <p>Cho đến thời điểm đăng ký này</p>
             <input type="text" id="so-nguoi">
+        </div>
+
+        <div class="form_group">
+            <label for="so-nguoi-dt">Số người đồng thuận tiêm vắc xin COVID-19:<span>*</span></label>
+            <input type="text" id="so-nguoi-dt">
         </div>
 
         <div class="form_group">
@@ -223,13 +235,13 @@
         </div>
 
         <div class="form_group">
-            <label for="sdt">Số điện thoại</label>
+            <label for="sdt">Số điện thoại<span>*</span></label>
             <input type="text" id="sdt">
         </div>
 
         <div class="form_group">
-            <label for="email">Email</label>
-            <input type="text" id="email">
+            <label for="email">Email<span>*</span></label>
+            <input type="text" id="email" name="email">
         </div>
 
     <div>
@@ -242,10 +254,17 @@
         <lable for="checkbox">Send me a copy of my responses</lable>
     </div>
         <button>Submit</button>
+
+        <div class="link">
+            <a href="">Privacy Notice</a>
+            <span>|</span>
+            <a href="">Report Abuse</a>
+        </div>
     </div>
 
     <script src="script.js"></script>
 
-
 </body>
 </html>
+
+
