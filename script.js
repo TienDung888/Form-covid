@@ -67,7 +67,7 @@ function validateForm(event){
         const formGroupDiv = input.closest('.form_group');
         const label = formGroupDiv.querySelector('label');
 
-        //Bỏ ký tử span * khỏi label khi hiển thị error
+        //Bỏ ký tự span * khỏi label khi hiển thị error
         const labelClone = label.cloneNode(true);
         const requiredSpan = labelClone.querySelector('span');
         if (requiredSpan){
